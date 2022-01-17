@@ -6,8 +6,8 @@
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 40, 46 )
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 45, 30.25 )
+[sub_resource type="CircleShape2D" id=4]
+radius = 46.055
 
 [node name="Node2D" type="Node2D"]
 
@@ -25,7 +25,7 @@ position = Vector2( -1, -48 )
 shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( -5, 97 )
+position = Vector2( 0, 85 )
 scale = Vector2( 1, 1.44 )
 current = true
 process_mode = 0
@@ -47,8 +47,8 @@ collision_mask = 2
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/EnemyDetector"]
-position = Vector2( -1, -32.25 )
-shape = SubResource( 2 )
+position = Vector2( 0, -48 )
+shape = SubResource( 4 )
 
 [connection signal="area_entered" from="Player/EnemyDetector" to="Player" method="_on_EnemyDetector_area_entered"]
 [connection signal="body_entered" from="Player/EnemyDetector" to="Player" method="_on_EnemyDetector_body_entered"]
