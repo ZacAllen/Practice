@@ -26,8 +26,9 @@ shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 0, 85 )
-scale = Vector2( 1, 1.44 )
+scale = Vector2( 17.7695, -4.67445 )
 current = true
+zoom = Vector2( 1, 1.35 )
 process_mode = 0
 limit_left = 0
 limit_top = 0

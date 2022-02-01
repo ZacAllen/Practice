@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/User Interface/TitleBg.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/User Interface/QuitButton.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/User Interface/PlayButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/User Interface/ChangeSceneButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=4]
 
 [node name="MainScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -19,14 +21,17 @@ margin_right = 40.0
 margin_bottom = 14.0
 
 [node name="Menu" type="HBoxContainer" parent="."]
+anchor_top = 0.867
+anchor_bottom = 0.867
 margin_left = 40.0
-margin_top = 320.0
+margin_top = -200.2
 margin_right = 560.0
-margin_bottom = 400.0
+margin_bottom = -120.2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PlayButton" parent="Menu" instance=ExtResource( 3 )]
+next_scene_path = "res://src/levels/Test Level.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 2 )]
