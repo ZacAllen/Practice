@@ -6,6 +6,7 @@ export (String, FILE) var next_scene_path: = ""
 func _on_button_up():
 	get_tree().change_scene(next_scene_path)
 	get_tree().paused = false
+	BGM.bgm_paused = false
 	PlayerData.score = 0
 
 func _get_configuration_warning() -> String:
