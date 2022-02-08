@@ -1,2 +1,2 @@
 # NIGHTMAN GAME
-First godot game following GDQuest practice tutorial.
+This is a Nightman game now
